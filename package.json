@@ -6,10 +6,12 @@
     "api:build": "cd udagram-api-app && npm run build && cd ..",
     "api:install": "cd udagram-api-app && npm ci && cd ..",
     "api:test": "cd udagram-api-app && npm run test && cd ..",
+    "api:deploy": "cd udagram-api-app && npm run deploy && cd ..",
     "fe:build": "cd udagram-frontend-app && npm run build && cd ..",
     "fe:install": "cd udagram-frontend-app && npm ci && cd ..",
     "fe:test": "cd udagram-frontend-app && npm run test && cd ..",
-    "fe:deploy": "cd udagram-frontend-app && npm run deploy"
+    "fe:deploy": "cd udagram-frontend-app && npm run deploy && cd ..",
+    "app:deploy": "npm run api:deploy && npm run fe:deploy && cd .."
   },
   "author": "Tripv1 (tripv1@fsoft.com.vn)"
 }
