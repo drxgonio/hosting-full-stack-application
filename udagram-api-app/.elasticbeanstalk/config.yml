@@ -4,7 +4,7 @@ branch-defaults:
     group_suffix: null
 # Setting EB deploy artifact to Archive.zip
 deploy:
-  artifact: ./src/Archive.zip
+  artifact: ./www/Archive.zip
 global:
   application_name: udacity-tripv1-app
   branch: null
