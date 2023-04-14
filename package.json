@@ -9,7 +9,7 @@
     "fe:build": "cd udagram-frontend-app && npm run build && cd ..",
     "fe:install": "cd udagram-frontend-app && npm ci && cd ..",
     "fe:test": "cd udagram-frontend-app && npm run test && cd ..",
-    "postinstall": "npm run api:install && npm run fe:install"
+    "fe:deploy": "cd udagram-frontend-app && npm run deploy"
   },
   "author": "Tripv1 (tripv1@fsoft.com.vn)"
 }
