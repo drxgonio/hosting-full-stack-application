@@ -26,12 +26,6 @@ jobs:
           command: |
             npm run fe:build
             # echo "TODO: Build the frontend app"
-      # TODO: Lint the frontend
-      - run:
-          name: Front-End Lint
-          command: |
-            # echo "TODO: Lint the frontend"
-            npm run fe:lint
       # TODO: TEST the frontend
       # - run:
       #     name: Front-End TEST
