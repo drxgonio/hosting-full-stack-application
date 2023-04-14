@@ -1,0 +1,15 @@
+{
+  "name": "hosting-full-stack",
+  "version": "1.0.0",
+  "description": "Hosting the Udacity Udagram Full Stack Application on AWS.",
+  "scripts": {
+    "api:build": "cd udagram-api-app && npm run build && cd ..",
+    "api:install": "cd udagram-api-app && npm ci && cd ..",
+    "api:test": "cd udagram-api-app && npm run test && cd ..",
+    "fe:build": "cd udagram-frontend-app && npm run build && cd ..",
+    "fe:install": "cd udagram-frontend-app && npm ci && cd ..",
+    "fe:test": "cd udagram-frontend-app && npm run test && cd ..",
+    "postinstall": "npm run api:install && npm run fe:install"
+  },
+  "author": "Tripv1 (tripv1@fsoft.com.vn)"
+}
