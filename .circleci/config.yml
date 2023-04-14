@@ -13,23 +13,12 @@ jobs:
           node-version: '14.15' 
       - checkout
       - aws-cli/setup
+      - eb/setup
 # Installing the frontend dependencies
       - run:
           name: Front-End Install
           command: |
             npm run fe:install
-      # - run:
-      #     name: Front-End Install Karma Cli
-      #     command: |
-      #       npm run frontend:karmaCli
-      # - run:
-      #     name: Front-End Tests
-      #     command: |
-      #       npm run frontend:test
-      # - run:
-      #     name: Front-End End-to-end Testing
-      #     command: |
-      #       npm run frontend:e2e
 
 # Building the frontend
       - run:
@@ -51,11 +40,6 @@ jobs:
           name: Back-End Build
           command: |
             npm run api:build
-# Installing AWS Elastic Beanstalk CLI
-      - run:
-          name: Installing AWS Elasticbeanstalk
-          command: |
-            npm run api:aws-eb
 # Deploying the backend to AWS Elastic Beanstalk
       - run:
           name: Back-End Deploy
