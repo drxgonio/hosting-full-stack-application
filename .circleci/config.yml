@@ -6,7 +6,7 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
 jobs:
-  build:
+  front-end:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15"
@@ -25,20 +25,15 @@ jobs:
           name: Front-End Build
           command: |
             npm run fe:build
-            # echo "TODO: Build the frontend app"       
+            # echo "TODO: Build the frontend app"   
       - run:
-          name: Install API Dependencies
-          command: |
-            # echo "TODO: Install dependencies in the the backend API "
-            npm run api:install
-      # TODO: Build the backend API      
-      - run:
-          name: API Build
-          command: |
-            # echo "TODO: Build the backend API"
-            npm run api:build  
+          name: Deploy App
+          command: |  
+            # echo "# TODO: Deploy frontend"  
+            npm run fe:deploy    
+
   # deploy step will run only after manual approval
-  deploy:
+  back-end:
     docker:
       - image: "cimg/base:stable"
         environment:
@@ -63,21 +58,11 @@ jobs:
             npm run api:build 
       - run:
           name: Deploy App
-          # TODO: Install, build, deploy in both apps
           command: |  
-            # echo "# TODO: Install, build, deploy frontend & backend (full-stack)"  
-            npm run app:deploy
+            # echo "# TODO: Deploy backend "  
+            npm run api:deploy
 workflows:
   Udagram_full-stack:
     jobs:
-      - build: # the job to conditionally run based on the filter by main/master .
-          filters:
-            branches:
-              only: main
-      - hold:
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
+      - front-end
+      - back-end
