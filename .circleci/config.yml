@@ -65,5 +65,11 @@ jobs:
 workflows:
   Udagram_full-stack:
     jobs:
-      - front-end
-      - back-end
+      - front-end:
+          filters:
+            branches:
+              only: main
+      - back-end:
+          filters:
+            branches:
+              only: main
