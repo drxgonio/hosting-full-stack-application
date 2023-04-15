@@ -18,6 +18,6 @@ EB URL: `http://udacitytripv1app-env.eba-sjnqaq8x.us-east-1.elasticbeanstalk.com
 The frontend application is deployed using AWS S3 Bucket. The bundled assets are uploaded to an S3 bucket and that
 bucket is made publicly readable.
 
-Bucket URL: `http://testingtripv1.s3-website-us-east-1.amazonaws.com`
+Bucket URL: `http://udacity-program-hosting.s3-website-us-east-1.amazonaws.com`
 
 End users can access the application from the Bucket URL.
