@@ -25,14 +25,7 @@ jobs:
           name: Front-End Build
           command: |
             npm run fe:build
-            # echo "TODO: Build the frontend app"
-      # TODO: TEST the frontend
-      # - run:
-      #     name: Front-End TEST
-      #     command: |
-      #       # echo "TODO: TEST the frontend"
-      #       npm run fe:test
-      # TODO: Install dependencies in the the backend API          
+            # echo "TODO: Build the frontend app"       
       - run:
           name: Install API Dependencies
           command: |
@@ -74,12 +67,6 @@ jobs:
           command: |  
             # echo "# TODO: Install, build, deploy frontend & backend (full-stack)"  
             npm run app:deploy
-      # - run:
-      #     name: Front-End Deploy
-      #     command: npm run fe:deploy
-      # - run:
-      #     name: Back-End Deploy
-      #     command: npm run api:deploy
 workflows:
   Udagram_full-stack:
     jobs:
